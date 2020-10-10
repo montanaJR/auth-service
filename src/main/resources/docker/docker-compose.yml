@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  auth-database:
+    image: mysql:8.0.21
+    environment:
+      MYSQL_ROOT_PASSWORD: temppassword
+      MYSQL_DATABASE: auth
+    ports:
+      - "3306:3306"
+  eureka-service:
+      image: eureka-service:1.0-SNAPSHOT
+      ports:
+        - "8761:8761"
+
