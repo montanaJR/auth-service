@@ -1,1 +1,1 @@
-docker run --name=auth-database -d mysql -e MYSQL_RANDOM_ROOT_PASSWORD=passwd
+Authentication service
