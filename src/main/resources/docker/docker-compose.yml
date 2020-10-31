@@ -2,15 +2,22 @@ version: '3'
 
 services:
 
-  auth-database:
+  database:
+    container_name: mysql-db
     image: mysql:8.0.21
     environment:
       MYSQL_ROOT_PASSWORD: temppassword
       MYSQL_DATABASE: auth
     ports:
       - "3306:3306"
-  eureka-service:
-      image: eureka-service:1.0-SNAPSHOT
+  eureka:
+      container_name: eureka-service
+      image: 'eureka-service:1.0'
       ports:
         - "8761:8761"
+  redis:
+    container_name: auth-redis
+    image: redis:4
+    ports:
+      - '6379:6379'
 

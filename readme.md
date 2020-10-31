@@ -1,1 +1,6 @@
-docker run --name=auth-database -d mysql -e MYSQL_RANDOM_ROOT_PASSWORD=passwd
+**Auth service**
+- Mysql + Mybatis + Flyway
+- Spring boot
+- Lombok
+- Redis store
+...
